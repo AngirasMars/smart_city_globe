@@ -9,9 +9,9 @@ const App = () => {
   const handleCityClick = async (city) => {
     try {
       const [weatherRes, trafficRes, newsRes] = await Promise.all([
-        axios.get(`http://localhost:5000/api/weather?lat=${city.lat}&lon=${city.lon}`),
-        axios.get(`http://localhost:5000/api/traffic?lat=${city.lat}&lon=${city.lon}`),
-        axios.get(`http://localhost:5000/api/news?city=${city.name}`)
+        axios.get(`http://smart-city-globe-api.onrender.com/api/weather?lat=${city.lat}&lon=${city.lon}`),
+        axios.get(`http://smart-city-globe-api.onrender.com/api/traffic?lat=${city.lat}&lon=${city.lon}`),
+        axios.get(`http://smart-city-globe-api.onrender.com/api/news?city=${city.name}`)
       ]);
 
       // Pass entire response structure
